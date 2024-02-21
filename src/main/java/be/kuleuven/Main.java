@@ -7,13 +7,12 @@ public class Main {
         Scanner input = new Scanner(System.in);
         int aantalLijsten = input.nextInt();
 
-        for (int i = 0; i < aantalLijsten; i++) {
+        for (int lijst = 0; lijst < aantalLijsten; lijst++) {
             int aantalNummers = input.nextInt();
             int[] gelezenNummers = new int[aantalNummers];
-            Arrays.fill(gelezenNummers,aantalNummers);
-            for (int j = 0; j < aantalNummers; j++) {
+            for (int getal = 0; getal < aantalNummers; getal++) {
                 if(input.hasNextInt()) {
-                    gelezenNummers[j] = input.nextInt();
+                    gelezenNummers[getal] = input.nextInt();
                 }
             }
             int laagsteNummer = 1001;
@@ -26,7 +25,7 @@ public class Main {
                     hoogsteNummer = nummer;
                 }
             }
-            System.out.println((i+1) + " " + laagsteNummer + " " + hoogsteNummer);
+            System.out.println((lijst+1) + " " + laagsteNummer + " " + hoogsteNummer);
         }
 
     }
