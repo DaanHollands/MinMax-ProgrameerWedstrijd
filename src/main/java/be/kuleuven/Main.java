@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int aantalLijsten = input.nextInt();
-
+        StringBuilder output = new StringBuilder();
         for (int lijst = 0; lijst < aantalLijsten; lijst++) {
             int aantalNummers = input.nextInt();
             int[] gelezenNummers = new int[aantalNummers];
@@ -15,18 +15,10 @@ public class Main {
                     gelezenNummers[getal] = input.nextInt();
                 }
             }
-            int laagsteNummer = 1001;
-            int hoogsteNummer = 0;
-            for (int nummer : gelezenNummers) {
-                if(laagsteNummer > nummer){
-                    laagsteNummer = nummer;
-                }
-                if (hoogsteNummer < nummer){
-                    hoogsteNummer = nummer;
-                }
-            }
-            System.out.println((lijst+1) + " " + laagsteNummer + " " + hoogsteNummer);
+            int laagsteNummer = Arrays.stream(gelezenNummers).min().getAsInt();
+            int hoogsteNummer = Arrays.stream(gelezenNummers).max().getAsInt();
+            output.append((lijst + 1)).append(" ").append(laagsteNummer).append(" ").append(hoogsteNummer).append("\n");
         }
-
+        System.out.println(output);
     }
 }
