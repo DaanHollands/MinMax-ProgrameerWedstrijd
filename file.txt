@@ -1,0 +1,23 @@
+Invoer
+3   -> Aantal te verwerken lijsten
+
+3   -> Aantal items in de lijst
+//lijst 1
+23  -> Item 1
+42  -> Item 2
+13  -> Item 3
+//lijst 2
+2   -> Aantal items in de lijst
+//lijst 2
+100 -> Item 1
+97  -> Item 2
+
+1   -> Aantal items in de lijst
+//lijst 3
+42  -> Item 1
+
+
+Uitvoer
+1 13 42     -> 1de lijst, min, max
+2 97 100    -> 2de lijst, min, max
+3 42 42     -> 3de lijst, min, max
